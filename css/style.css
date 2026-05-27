@@ -1,0 +1,303 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* BODY */
+
+body {
+
+  background: #202024;
+
+  font-family: Arial, sans-serif;
+
+  overflow-x: hidden;
+}
+
+
+/* CONTENEDOR */
+
+.site-container {
+
+  position: relative;
+
+  width: 100%;
+  max-width: 640px;
+
+  margin: 0 auto;
+}
+
+
+/* SECCIONES */
+
+section {
+
+  position: relative;
+
+  width: 100%;
+}
+
+
+/* IMÁGENES */
+
+img {
+
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+}
+
+
+/* =========================
+   PROMO
+========================= */
+
+.promo-section {
+
+  position: relative;
+
+  width: 100%;
+  height: auto;
+
+  overflow: hidden;
+}
+
+
+/* SLIDER */
+
+.promo-slider {
+
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 640 / 840;
+
+  overflow: hidden;
+}
+
+
+/* IMAGENES PROMO */
+
+.promo-image {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.45s ease;
+
+  pointer-events: none;
+}
+
+
+/* ACTIVA */
+
+.promo-image.active {
+
+  opacity: 1;
+
+  pointer-events: auto;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   CONTROLES PROMO
+========================= */
+
+.promo-controls {
+
+  position: absolute;
+
+  right: 22px;
+  bottom: 22px;
+
+  display: flex;
+  gap: 12px;
+
+  z-index: 10;
+}
+
+
+/* BOTONES */
+
+.promo-btn {
+
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba(255,255,255,0.25);
+
+  border-radius: 14px;
+
+  background: rgba(20,20,24,0.45);
+
+  backdrop-filter: blur(4px);
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* HOVER */
+
+.promo-btn:hover {
+
+  background: rgba(255,255,255,0.08);
+
+  border-color: rgba(255,255,255,0.45);
+}
+
+
+/* FLECHAS */
+
+.promo-btn::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  border-top: 2px solid rgba(255,255,255,0.9);
+  border-right: 2px solid rgba(255,255,255,0.9);
+
+  transform-origin: center;
+}
+
+
+/* PREV */
+
+.prev-btn::before {
+
+  transform:
+    translate(-35%, -50%)
+    rotate(-135deg);
+}
+
+
+/* NEXT */
+
+.next-btn::before {
+
+  transform:
+    translate(-65%, -50%)
+    rotate(45deg);
+}
+
+
+/* DESACTIVADO */
+
+.promo-btn.disabled {
+
+  opacity: 0.28;
+
+  cursor: default;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact-section {
+
+  position: relative;
+}
+
+
+/* BOTONES CONTACTO */
+
+.contact-buttons {
+
+  position: absolute;
+
+  top: 54%;
+  left: 48px;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  z-index: 5;
+}
+
+
+/* BOTON CONTACTO */
+
+.contact-btn {
+
+  width: 44px;
+  height: 44px;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* HOVER */
+
+.contact-btn:hover {
+
+  opacity: 0.75;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   PORTFOLIO LINK
+========================= */
+
+.portfolio-link {
+
+  display: block;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 640px) {
+
+  body {
+
+    background: #202024;
+  }
+
+}
